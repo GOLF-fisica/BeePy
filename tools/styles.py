@@ -17,7 +17,17 @@ def get_bootstrap_scripts():
 	unsafe_allow_html=True)
 
 
-def load_my_styles():
+def load_my_styles(style_name = "main"):
 	# Read the css file with python
-	with open("./assets/styles/styles.css") as style_file:
+	with open(f"./assets/styles/{style_name}.css") as style_file:
 		st.markdown(f'<style>{style_file.read()}</style>', unsafe_allow_html=True)
+
+
+def load_header():
+	# Header
+	st.markdown(
+		"""
+			<img src="https://i.imgur.com/yiaC2Fk.png" class="header__img" alt="Streamlit Logo">
+		""", 
+		unsafe_allow_html=True
+	)

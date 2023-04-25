@@ -1,19 +1,13 @@
 import streamlit as st
-
 from tools import styles
+import random
 
 styles.get_bootstrap_styles()
 styles.get_bootstrap_scripts()
 styles.load_my_styles()
+styles.load_header()
 
 
-# Header
-st.markdown(
-    """
-		<img src="https://i.imgur.com/yiaC2Fk.png" class="header__img" alt="Streamlit Logo">
-    """, 
-	unsafe_allow_html=True
-)
 # Frase inicial
 st.markdown(
     """
@@ -27,7 +21,16 @@ st.markdown(
 col1, col2 = st.columns(2)
 
 with col1:
-	st.image('https://i.imgur.com/03TYRbN.jpg')
+	images = [
+		'https://i.imgur.com/jAQILyd.jpg',
+		'https://i.imgur.com/OVNsYDy.jpg',
+		'https://i.imgur.com/EGjQzQY.jpg',
+		'https://i.imgur.com/T7pglCl.jpg',
+		'https://i.imgur.com/NaAIdil.jpg',
+		'https://i.imgur.com/cWjWIBC.jpg',
+		'https://i.imgur.com/HQJ6HAQ.jpg',
+	]
+	st.image(random.choice(images), use_column_width=True)
 
 with col2:
 	# Acerca del evento
