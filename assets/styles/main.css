@@ -47,6 +47,8 @@ div[data-testid="stImage"] {
 .title {
 	margin-left: 5rem;
 	margin-top: 2rem;
+	text-align: center;
+	font-weight: bold;
 }
 
 .text {
@@ -54,6 +56,7 @@ div[data-testid="stImage"] {
 	font-size: 1.2rem;
 	line-height: 2rem;
 	font-weight: 300;
+	text-align: center;
 }
 
 #register-btn {
@@ -69,12 +72,48 @@ div[data-testid="stImage"] {
 }
 
 .footer {
-	/* position: absolute; */
-	/* right: 0; */
-	/* bottom: 0; */
-	margin-top: 2rem;
+	margin-top: 4rem;
+	opacity: 0.6;
+	transition: all	0.3s ease-in-out;
 }
 
+.footer:hover {
+	opacity: 1;
+}
+
+.footer p {
+	font-weight: 600;
+	font-size: 0.8rem;
+}
+
+.font-weight-bold {
+	font-weight: bold;
+}
+
+.font-size-large {
+	font-size: 1.5rem;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.image-container img {
+	opacity: 0.5;
+	filter: grayscale(100%);
+	transition: all 0.3s ease-in-out;
+	width: 200px;
+}
+
+.image-container img:hover {
+  opacity: 1;
+	filter: grayscale(0%);
+
+}
+
+.text-start {
+	text-align: start;
+}
 
 @media only screen and (max-width: 600px) {
 	div[data-testid="stImage"] {
@@ -86,6 +125,11 @@ div[data-testid="stImage"] {
 		font-size: 1.2rem;
 		line-height: 2rem;
 		font-weight: 300;
+	}
+
+	.image-container img {
+		width: 100px;
+		margin-bottom: 1rem;
 	}
 	
 }
